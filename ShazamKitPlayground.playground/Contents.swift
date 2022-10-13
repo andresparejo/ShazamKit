@@ -81,16 +81,13 @@ func makeShazamSignature(inputAudioURL: URL?) {
 
         convert(audioFile: audioFile, outputFormat: AVAudioFormat(standardFormatWithSampleRate: 44100, channels: 1)!, pcmBlock: pcmBlock)
 
-    } catch {
-        // Handle audio file error
+    } catch let error {
+        print(error)
     }
 }
 
 //MARK: - NOTE
 /// please add your trim videos on the resource folder and uncomment / declare them below
-
-//makeShazamSignature(inputAudioURL: Bundle.main.url(forResource: "Trim1", withExtension: "mp4"))
-//makeShazamSignature(inputAudioURL: Bundle.main.url(forResource: "Trim2", withExtension: "mp4"))
-//makeShazamSignature(inputAudioURL: Bundle.main.url(forResource: "Trim3", withExtension: "mp4"))
+makeShazamSignature(inputAudioURL: Bundle.main.url(forResource: "trimtrim", withExtension: "mp4"))
                     
 
